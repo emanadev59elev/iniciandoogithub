@@ -1,0 +1,178 @@
+/*
+O body e animação do background
+*/
+
+body{
+  color: aliceblue;
+  font-family: arial;
+  animation: mudar_background 20s infinite linear;
+ /* 
+ background-image: url("/img/pexels-kai-pilger-1132147.jpg");
+ */
+}
+
+@keyframes mudar_background{
+  0%{
+    background-image: linear-gradient( to right, rgb(20, 147, 220), rgb(17, 54, 71));
+  }
+  50% {
+    background-image: linear-gradient( to right, rgb(0, 92, 197), rgb(90, 20, 220));
+  }
+  100% {
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+  }
+
+}
+
+/*
+O FORM e os seus elementos
+*/
+
+.board{
+  margin: 0 auto;
+  top: 5%;
+  width: 87%;
+  position: absolute;
+}
+
+fieldset{
+  border: 3px solid aliceblue;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgb(25, 25, 28, .5);
+}
+
+legend{
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: rgb(17, 54, 71);
+  border: 3px solid aliceblue;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.caixa_deInput{
+  position: relative;
+}
+
+.entrada_usuario{
+  background: none;
+  border: none;
+  width: 90%;
+  outline: none;
+  border-bottom: 1px solid aliceblue;
+  border-left: 1px solid aliceblue;
+  border-bottom-left-radius: 15px;
+  /*border-bottom-left-radius: 15px;*/
+  padding: 5px;
+  padding-left: 20px;
+  letter-spacing: 2.6px;
+  color: aliceblue;
+  transition: 1s;
+}
+
+.label_entradaUsuario{
+  position: absolute;
+  top: -20px;
+  right: 8%;
+  transition: all 1s;
+}
+
+#username{
+  text-transform: lowercase;
+}
+
+.entrada_usuario:focus {
+  border-bottom: 1px solid aliceblue;
+  width: 50%;
+}
+
+/*
+.entrada_usuario:hover ~.label_entradaUsuario, .entrada_usuario:valid ~.label_entradaUsuario{
+  top: 0;
+}
+*/
+
+.entrada_usuario:hover ~.label_entradaUsuario{
+  top: 0;
+}
+
+.password_info{
+  color: red;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.data_nascimento{
+  padding: 20px;
+  width: 90%;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  transition: all 1s;
+}
+
+.data_nascimento:hover {
+  width: 35%;
+  
+}
+.data_nascimento:hover ~.label_dataNascimento{
+  top: 50%;
+}
+
+.label_dataNascimento{
+  position: absolute;
+  top: -25px;
+  right: 5%;
+  transition: all 1s;
+}
+
+.botao_cadastrar{
+  margin: 0 auto;
+  width: 100%;
+  padding: 8px;
+  border-radius: 20px;
+  background-color: limegreen;
+  border: none;
+  color: aliceblue;
+  font-size: 35px;
+}
+
+h3{
+  text-transform: uppercase;
+}
+
+/*
+Estilizado o modal
+*/
+
+  .abrir {
+    background-color: skyblue;
+    border: 5px solid lime;
+    padding: 15px;
+    border-radius: 20px;
+    color: red;
+  }
+
+  .fechar {
+    background-color: lime;
+    border: 5px solid dodgerblue;
+    padding: 15px;
+    border-radius: 20px;
+    color: blue;
+  }
+
+  dialog {
+    width: 80%;
+    border-radius: 20px;
+    border: 3px solid dodgerblue;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    transition: all 3s;
+  }
+
+  dialog::backdrop {
+    background-color: rgb(0 0 0 / .7);
+  }
