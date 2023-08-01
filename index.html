@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Emanuel Venâncio">
+  <meta name="description" content="este formulário é um simples teste sobre a eficiência do banco de dados criado pelo autor supracitado.">
+
+  <title>TESTANDO FORM 2 | EMANA School</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Os meus estilos-->
+  <link rel="stylesheet" href="estilos.css">
+
+  
+</head>
+
+<!------>
+
+
+<body>
+  
+<div class="board">
+    <form action="index.php" method="post">
+      <fieldset>
+        <legend class="legenda"><strong>Cadastre-se na EMANA School</strong></legend>
+    <br>  <br>
+        <div class="caixa_deInput">
+          <input type="text" id="nome" class="entrada_usuario" name="Nome"  required>
+          <label for="nome" class="label_entradaUsuario">Nome Completo</label>
+        </div>
+    <br>
+        <br>
+        <div class="caixa_deInput">
+          <input type="text" id="username"  class="entrada_usuario" name="Usuario" required>
+          <label for="username" class="label_entradaUsuario">Username</label>
+        </div>
+    <br>
+        <br>
+        <div class="caixa_deInput">
+          <input type="email" id="email" class="entrada_usuario" name="email"  required>
+          <label for="email" class="label_entradaUsuario">Insira seu email</label>
+        </div>
+    <br>
+        <br>
+        <div class="caixa_deInput">
+          <input type="number" id="telefone" class="entrada_usuario" name="Telefone" required>
+          <label for="telefone" class="label_entradaUsuario">Telefone</label>
+        </div>
+  
+        <br>
+    <br>
+        <h3>genero</h3>
+        <input type="radio" name="Genero" value="Masculino" id="masculino" class="masculino elemento_extra" required>
+        <label for="masculino" >Masculino</label>
+    <br>  <br>
+        <input type="radio" name="Genero" value="Femenino" id="femenino" class="feminino elemento_extra" required>
+        <label for="femenino">Feminino</label>
+  
+        <br><br>
+        
+        <div class="caixa_deInput">
+          <input type="date" id="data" class="data_nascimento elemento_extra" name="Aniversario" required>
+          <label for="data" class="label_dataNascimento"><strong>Data de nascimento</strong></label>
+        </div>
+    <br>
+        <br>
+        <div class="caixa_deInput">
+          <input type="text" id="Regiao" class="entrada_usuario"  name="regiao" required>
+          <label for="pais" class="label_entradaUsuario">Região</label>
+        </div>
+  <br>
+        <br>
+        <div class="caixa_deInput">
+          <input type="password" id="password" class="entrada_usuario" name="Password" onchange="confirmarPassword()" ; required>
+          <label for="password" class="label_entradaUsuario">Crie uma password</label>
+        </div>
+  <br>
+        <br>
+        <div class="caixa_deInput">
+          <input type="password" id="password_confirm" class="entrada_usuario" onchange="confirmarPassword()" ; required>
+          <label for="password_confirm" class="label_entradaUsuario">Confirme sua password</label>
+       <p class="password_info"></p>
+        </div>
+        
+        <div class="caixa_deInput">
+          <input type="submit" value="Cadastrar-me" class="botao_cadastrar" onclick="abrirModal()" ;>
+        </div>
+  
+      </fieldset>
+    </form>
+</div>
+
+<!---
+A partir daqui começa a criação do modal
+--->
+  
+      <dialog>
+          <h4>Você Confirma os seguintes dados? </h4>
+          <strong>Nome: </strong> <u class="nome"></u><br>
+          <strong>Username: </strong> <u class="username"></u>
+          <br>
+          <strong>e-mail: </strong> <u class="email"></u>
+          <br>
+          <strong>Telefone: </strong><u class="numero"></u>
+          <br>
+          <strong>Data de nascimento: </strong> <u class="data"></u>
+          <br><strong>Região: </strong> <u class="regiao"></u><br>
+      
+      
+          <br>
+      
+          <button class="fechar">SIM</button>
+        </dialog>
+    
+  
+</body>
+<!---- O Javascript --->
+<script src="codigo.js"></script>
+
+</html>
